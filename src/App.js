@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import logo from "./Images/logo.png";
+import Header from "./Components/Header";
+import NewCardUpper from "./Components/NewCardUpper";
+import NewCardLower from "./Components/NewCardLower";
+import CardDetails from "./Components/CardDetails";
+import Cards from "./Components/Cards";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* ---------navbar--------- */}
+      <nav className='fixed bg-white'>
+        <img className='p-5' src={logo} alt='' width='180' height='180' />
+      </nav>
+      <div className='bg-bgcol ' style={{ height: "100%" }}>
+        <Header />
+        {/* <NewCardUpper />
+        <NewCardLower />
+        <CardDetails /> */}
+        <Cards />
+      </div>
     </div>
   );
 }
